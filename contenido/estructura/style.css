@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    min-height: 100vh;
+    padding: 20px;
+    color: #e0e1dd;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(26, 35, 53, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
+    border: 1px solid #415a77;
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(90deg, #1e3a5f, #2a4d7a);
+    color: #e0e1dd;
+    text-align: center;
+    padding: 25px 20px;
+    border-bottom: 3px solid #778da9;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: #a3b5cc;
+}
+
+.exercises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.exercise-item {
+    background: rgba(42, 77, 122, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #415a77;
+    transition: all 0.3s ease;
+}
+
+.exercise-item:hover {
+    background: rgba(42, 77, 122, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 100, 200, 0.2);
+}
+
+.exercise-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #415a77, #778da9);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.exercise-btn:hover {
+    background: linear-gradient(135deg, #778da9, #9bb1d3);
+    transform: scale(1.02);
+}
+
+.exercise-number {
+    background: #1e3a5f;
+    color: #e0e1dd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #a3b5cc;
+}
+
+.exercise-title {
+    flex: 1;
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: rgba(13, 27, 42, 0.8);
+    border: 1px solid #415a77;
+    border-radius: 5px;
+    color: #e0e1dd;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #778da9;
+    box-shadow: 0 0 5px rgba(119, 141, 169, 0.5);
+}
+
+.result-box {
+    padding: 12px;
+    background: rgba(13, 27, 42, 0.8);
+    border-radius: 6px;
+    border-left: 4px solid #778da9;
+    min-height: 60px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    white-space: pre-wrap;
+    color: #e0e1dd;
+}
+
+.console-output {
+    margin: 30px;
+    padding: 20px;
+    background: rgba(13, 27, 42, 0.8);
+    border-radius: 10px;
+    border: 1px solid #415a77;
+}
+
+.console-output h3 {
+    color: #a3b5cc;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.console-box {
+    background: #0a141f;
+    color: #00ff88;
+    padding: 15px;
+    border-radius: 6px;
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    border: 1px solid #1e3a5f;
+}
+
+.clear-btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    transition: background 0.3s ease;
+}
+
+.clear-btn:hover {
+    background: #f72536;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #a3b5cc;
+    background: rgba(26, 35, 53, 0.8);
+    border-top: 1px solid #415a77;
+    font-size: 0.9rem;
+}
+
+/* Scrollbar personalizado */
+.console-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.console-box::-webkit-scrollbar-track {
+    background: #1b263b;
+}
+
+.console-box::-webkit-scrollbar-thumb {
+    background: #415a77;
+    border-radius: 4px;
+}
+
+.console-box::-webkit-scrollbar-thumb:hover {
+    background: #778da9;
+}
+
+@media (max-width: 768px) {
+    .exercises-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}

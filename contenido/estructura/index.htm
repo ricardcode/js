@@ -1,12 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Laboratorio 3</title>
 </head>
 <body>
-    <p>hola mundo estoy  de nuevo js</p>
-    <script src="4-juego.js"></script>
+    <h1>Laboratorio 3</h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #dbeafe);
+            color: #1e293b;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #1e40af;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            margin: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.15s ease;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        }
+
+        button:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+            opacity: 0.9;
+        }
+
+        #resultado {
+            margin-top: 30px;
+            padding: 15px;
+            min-height: 40px;
+            background: #fff;
+            border: 2px solid #2563eb;
+            border-radius: 8px;
+            color: #374151;
+            font-weight: bold;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+
+    <button onclick="ejercicio1()">Ejercicio 1</button>
+    <button onclick="ejercicio2()">Ejercicio 2</button>
+    <button onclick="ejercicio11()">Ejercicio 11</button>
+    <button onclick="ejercicio12()">Ejercicio 12</button>
+    <button onclick="ejercicio28()">Ejercicio 28</button>
+    <button onclick="ejercicio29()">Ejercicio 29</button>
+
+    <p id="resultado"></p>
+
+    <script src="/lab-3/ejercicio1.js"></script>
+    <script src="/lab-3/ejercicio2.js"></script>
+    <script src="/lab-3/ejercicio11.js"></script>
+    <script src="/lab-3/ejercicio12.js"></script>
+    <script src="/lab-3/ejercicio28.js"></script>
+    <script src="/lab-3/ejercicio29.js"></script>
+
 </body>
 </html>
+ 
